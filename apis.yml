@@ -1,23 +1,60 @@
 aid: apto
+
 name: Apto
-description: 'Apto is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Apto is a financial technology company that provides a platform for lenders and borrowers to manage loan workflows, underwriting, and servicing. The company focuses on automating loan processes, offering tools for loan origination, documentation, and compliance. While detailed public documentation is limited, Apto aims to streamline financial services through its API-driven solutions, targeting banks, credit unions, and fintech firms seeking to modernize their lending operations.'
+
 url: https://raw.githubusercontent.com/api-evangelist/apto/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's website renders content via JavaScript, preventing machine‑readable extraction of API specifications.
+  evidence:
+    - url: https://www.apto.ai/
+      status: 200
+  checked: 2026-09-25
+
 tags:
 - Company
-apis: []
+- FinTech
+- Lending
+- Loan-Management
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/apto-hosts.yml
+- type: Vendors
+  url: vendors/apto-vendors.yml
+- type: DomainSecurity
+  url: security/apto-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/apto
+
+apis: []
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
